@@ -1,5 +1,5 @@
 ## Kubenetes Local Kind Cluster Project
 
 ## Project 1:
-  - FoodZen:
-      - This is online food ordering site Built using MERN Stack.
+  - Shopping Cart Application:
+      - This is online Cloth ordering site Built using MERN Stack.
