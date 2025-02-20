@@ -4,7 +4,7 @@ metadata:
   name: shopping-app-deployment
   labels:
     app: shopping-app
-  namespace: nginx
+  namespace: shopping-app
 spec:
   replicas: 1
   selector:
