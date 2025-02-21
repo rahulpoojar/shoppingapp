@@ -1,33 +1,61 @@
-# Ecommerce Web Application
+## Project 1: Online Shopping Website (React + Kubernetes)
 
-Welcome to our ecommerce web application! This project allows users to browse and purchase various products conveniently.
+This project is a simple online shopping website built using React. It has been containerized using Docker and deployed on a local Kubernetes cluster created with Kind. The deployment includes a multi-node setup with 1 master and 3 worker nodes.
 
-## Features
+### Technologies Used
+- **Frontend**: React
+- **Containerization**: Docker
+- **Orchestration**: Kubernetes (Kind cluster)
+- **Local Deployment**: Kind (Kubernetes IN Docker)
 
-- Browse through a wide range of products.
-- Add products to the shopping cart with a single click.
-- Seamlessly manage the shopping cart using Redux Toolkit.
-- Check out securely and efficiently.
+---
 
-## Technologies Used
+## Steps to Reproduce
 
-- React.js
-- Redux Toolkit
-- HTML5
-- Tailwind CSS
-- JavaScript
+1. **Dockerize the Application**:
+   - Created a `Dockerfile` to containerize the React application.
+   - Built the Docker image and verified that the application runs inside the container.
+   - Pushed the Docker image to Docker Hub.
 
-## Getting Started
+2. **Set Up Kubernetes Cluster**:
+   - Created a local Kubernetes cluster using Kind with 1 master and 3 worker nodes.
+   - Verified the cluster setup using `kubectl get nodes`.
 
-To get started with the project, follow these steps:
+3. **Deploy the Application**:
+   - Created Kubernetes manifests for:
+     - **Namespace**: To isolate the application.
+     - **Deployment**: To manage the application pods.
+     - **Service**: To expose the application internally.
+   - Applied the manifests using `kubectl apply -f <file>.yaml`.
+   - Verified the deployment using `kubectl get pods,svc -n <namespace>`.
 
-1. Clone the repository: `git clone https://github.com/0x1Luffy/Redux-Toolkt-Cart.git`
-2. Navigate to the project directory: `cd Redux-Toolkt-Cart`
-3. Install dependencies: `npm install`
-4. Start the development server: `npm start`
-5. Open your browser and visit `http://localhost:3000` to view the application.
+4. **Access the Application**:
+   - Accessed the application locally using the service IP and port.
 
-## Contributing
+---
 
-We welcome contributions from the community! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
+## Screenshots and Demo
 
+### Docker Container Running the Application
+![Docker Container Running](screenshots/docker-container.png)
+
+### Docker Hub Image Upload
+![Docker Hub Image](screenshots/docker-hub-image.png)
+
+### Kubernetes Cluster Setup
+![Kind Cluster Nodes](screenshots/kind-cluster-nodes.png)
+
+### Application Running on Kubernetes
+![Kubernetes Deployment](screenshots/k8s-deployment.png)
+
+---
+
+## Prerequisites
+
+To run this project locally, you need:
+- Docker installed.
+- Kind installed.
+- Kubectl installed.
+- A Docker Hub account (optional, for pushing images).
+
+---
