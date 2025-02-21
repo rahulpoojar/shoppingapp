@@ -37,16 +37,13 @@ This project is a simple online shopping website built using React. It has been 
 ## Screenshots and Demo
 
 ### Docker Container Running the Application
-![Docker Container Running](screenshots/docker-container.png)
+![Docker Container Running](screenshots/docker.gif)
 
 ### Docker Hub Image Upload
 ![Docker Hub Image](screenshots/docker-hub-image.png)
 
-### Kubernetes Cluster Setup
-![Kind Cluster Nodes](screenshots/kind-cluster-nodes.png)
-
 ### Application Running on Kubernetes
-![Kubernetes Deployment](screenshots/k8s-deployment.png)
+![Kubernetes Deployment](screenshots/kubernetes.gif)
 
 ---
 
