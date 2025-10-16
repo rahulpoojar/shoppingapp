@@ -2,7 +2,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: shopping-app-hpa
-  namespace: shopping-app
+  namespace: default
 
 spec:
   scaleTargetRef:

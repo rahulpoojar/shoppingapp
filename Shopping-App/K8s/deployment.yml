@@ -4,7 +4,7 @@ metadata:
   name: shopping-app-deployment
   labels:
     app: shopping-app
-  namespace: shopping-app
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -16,8 +16,8 @@ spec:
         app: shopping-app
     spec:
       containers:
-      - name: shopping-app
-        image: grootkesare/shopping-app
+      - name: shopwebsite
+        image: rahulpoojar/shoppingapp:v1
         ports:
         - containerPort: 5173
         resources:
